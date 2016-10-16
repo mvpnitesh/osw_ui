@@ -1,0 +1,39 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+    <head>
+        <title>NEC | {% block title %}{% endblock %}</title>
+
+        <script type="text/javascript" src="{% static 'js/utils.js'%}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
+        <meta name="description" content="description">
+        <meta name="author" content="DevOOPS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'plugins/bootstrap/bootstrap.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/jquery-ui/jquery-ui.min.css'%}" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+        <link href="{% static 'plugins/fancybox/jquery.fancybox.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/fullcalendar/fullcalendar.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/xcharts/xcharts.min.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/select2/select2.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/justified-gallery/justifiedGallery.css'%}" rel="stylesheet">
+        <link href="{% static 'css/style_v2.css'%}" rel="stylesheet">
+        <link href="{% static 'css/samagra.css'%}" rel="stylesheet">
+        <link href="{% static 'plugins/chartist/chartist.min.css'%}" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="container-fluid expanded-panel">
+                <div class="row">
+                    <div id="logo" class="col-xs-12 col-sm-12">
+                        <img src="{% static 'images/logo_black_1.png'%}" style="width:150px;height:75px">
+                        <!-- <a href="http://samagra.co/">Samagra</a> -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <h1>{% block head %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+    </body>
+</html>
